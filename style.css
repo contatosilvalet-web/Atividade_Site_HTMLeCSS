@@ -1,0 +1,648 @@
+/* ==========================================
+   RESET E CONFIGURAÇÕES VISUAIS GERAIS
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5D6CA;
+    /* 🎨 Cor 1: Nude Claro (Fundo Geral Confortável) */
+    color: #2c3e50;
+    padding-top: 70px;
+    /* 2) Menu Fixo Compensação */
+}
+
+h1,
+h2,
+h3 {
+    color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro (Garante o contraste dos títulos) */
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   Estilização da Imagem ao lado da Sidebar
+   ========================================== */
+
+img.img-conteudo-topo {
+    width: 100%;
+    height: auto;
+    /* Permite que a altura se ajuste proporcionalmente */
+    max-height: 300px;
+    /* Limita a altura máxima para não empurrar muito o texto */
+    object-fit: cover;
+    /* Mantém o corte inteligente da foto sem distorcer */
+    border-radius: 8px;
+    /* Cantos arredondados combinando com os cards */
+    margin-bottom: 20px;
+    /* Dá um respiro entre a imagem e o título H1 abaixo dela */
+}
+
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.imagem-placeholder {
+    display: none;
+}
+
+
+/* ==========================================
+   2) MENU FIXO NO TOPO
+   ========================================== */
+
+.meu-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(133, 75, 114, 0.3);
+}
+
+.meu-header .logo {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.meu-header .menu-links a {
+    color: #F5D6CA;
+    /* 🎨 Cor 1: Nude Claro para contraste no menu */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.meu-header .menu-links a:hover {
+    color: #EBB0B7;
+    /* 🎨 Cor 3: Rosa Pastel no Hover */
+}
+
+
+/* ==========================================
+   7) HEADER STICKY INTERNO
+   ========================================== */
+
+.container-sticky-externo {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.header-sticky-interno {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    background-color: #BC7E93;
+    /* 🎨 Cor 4: Malva / Rosa Queimado */
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   8) LAYOUT COM 2 COLUNAS SEM FLEX (Floats Clássicos)
+   ========================================== */
+
+.layout-container {
+    width: 100%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.08);
+    margin-bottom: 35px;
+    clear: both;
+    /* Garante o isolamento estrutural abaixo da introdução */
+}
+
+.layout-container::after,
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* 3) SIDEBAR QUE ACOMPANHA O SCROLL */
+
+.sidebar-esquerda {
+    float: left;
+    width: 28%;
+    background-color: #D9B2A9;
+    /* 🎨 Cor 2: Rose Gold Fosco */
+    padding: 20px;
+    border-radius: 6px;
+    margin-left: 0;
+    /* Alinhamento corrigido para não ultrapassar os limites do container */
+}
+
+.sidebar-esquerda .conteudo-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 160px;
+    /* Margem confortável calculada para evitar colisão visual no scroll */
+}
+
+.sidebar-esquerda h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    border-bottom: 2px solid #BC7E93;
+    /* 🎨 Cor 4: Malva */
+    padding-bottom: 5px;
+}
+
+.sidebar-esquerda ul {
+    list-style: none;
+    margin: 0;
+}
+
+.sidebar-esquerda ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar-esquerda ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(133, 75, 114, 0.2);
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.sidebar-esquerda ul li a:hover {
+    color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+}
+
+.conteudo-direita {
+    float: right;
+    width: 68%;
+    /* Respiro seguro de 4% em relação à barra lateral */
+}
+
+.bloco-texto {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #BC7E93;
+    /* 🎨 Cor 4: Borda Malva */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+
+/* ==========================================
+   CONTEÚDO COMPLEMENTAR E SEÇÕES GLOBAIS
+   ========================================== */
+
+.secao-texto {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.05);
+    clear: both;
+    /* Impede que elementos flutuantes de blocos seguintes invadam o texto */
+    width: 100%;
+}
+
+.secao-cards,
+.layout-legado-container,
+.secao-sobreposta,
+.secao-metodologia,
+.secao-saibamais {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.05);
+}
+
+
+/* COMPORTAMENTO DO GRID DE 9 CARDS */
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #EBB0B7;
+    /* 🎨 Cor 3: Borda Rosa Pastel suave */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+    padding: 15px;
+}
+
+.card-corpo {
+    padding-top: 12px;
+}
+
+
+/* ==========================================
+   1) CARTÃO COM SELO NO CANTO SUPERIOR DIREITO
+   ========================================== */
+
+.card-selo {
+    position: relative;
+}
+
+.selo-tag {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+
+/* ==========================================
+   6) ETIQUETA SOBRE IMAGEM
+   ========================================== */
+
+.container-imagem-tag {
+    position: relative;
+}
+
+.etiqueta-imagem {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: #F5D6CA;
+    /* 🎨 Cor 1: Nude Claro para Destaque */
+    color: #854B72;
+    /* 🎨 Cor 5: Letra Ameixa Escuro */
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    z-index: 5;
+    border: 1px solid #BC7E93;
+}
+
+
+/* ==========================================
+   4) CARD COM BOTÃO FLUTUANDO DENTRO
+   ========================================== */
+
+.card-botao-flutuante {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.card-botao-flutuante a {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-decoration: none;
+}
+
+.btn-comprar {
+    background-color: #BC7E93;
+    /* 🎨 Cor 4: Malva */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+}
+
+
+/* ==========================================
+   SIDEBAR SEÇÃO MATERIAIS
+   ========================================== */
+
+.layout-legado-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sidebar-legada {
+    float: left;
+    width: 28%;
+    background-color: #D9B2A9;
+    /* 🎨 Cor 2: Rose Gold Fosco */
+    padding: 20px;
+    border-radius: 6px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 140px;
+}
+
+.sidebar-legada ul {
+    list-style: none;
+    margin: 0;
+}
+
+.sidebar-legada ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-legada ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sidebar-legada ul li a:hover {
+    color: #854B72;
+}
+
+.conteudo-legado {
+    float: right;
+    width: 68%;
+}
+
+
+/* ==========================================
+   9) ELEMENTOS SOBREPOSTOS (Z-INDEX)
+   ========================================== */
+
+.container-camadas {
+    position: relative;
+    height: 200px;
+    margin-top: 25px;
+}
+
+.card-camada {
+    width: 320px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(133, 75, 114, 0.15);
+}
+
+.camada-baixo {
+    background-color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.camada-cima {
+    background-color: #ffffff;
+    border: 2px solid #EBB0B7;
+    /* 🎨 Cor 3: Borda Rosa Pastel */
+    position: absolute;
+    top: 60px;
+    left: 110px;
+    z-index: 2;
+}
+
+
+/* ==========================================
+   FORMULÁRIO DE AVALIAÇÃO DA METODOLOGIA
+   ========================================== */
+
+.formulario-ta {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #EBB0B7;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.form-group.row {
+    display: flex;
+    gap: 15px;
+}
+
+.col-8 {
+    flex: 2;
+}
+
+.col-4 {
+    flex: 1;
+}
+
+.formulario-ta fieldset {
+    border: 1px solid #BC7E93;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    background-color: #fcfcfc;
+}
+
+.formulario-ta legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #854B72;
+}
+
+.pergunta-item {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #EBB0B7;
+    padding-bottom: 15px;
+}
+
+.pergunta-item label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.input-pequeno {
+    width: 120px !important;
+    padding: 6px 10px;
+    border: 1px solid #EBB0B7;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.pergunta-item textarea,
+.formulario-ta textarea {
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    border: 1px solid #EBB0B7;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.btn-enviar-form {
+    background-color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-enviar-form:hover {
+    background-color: #BC7E93;
+    /* 🎨 Cor 4: Malva */
+}
+
+
+/* ==========================================
+   5) BOTÃO FLUTUANTE DE CHAT (WhatsApp)
+   ========================================== */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 95px;
+    /* Deslocado para dar espaço ao bonequinho do VLibras no canto */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    /* Mantido verde nativo para reconhecimento imediato do app */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.2s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.video-youtube {
+    width: 100%;
+    height: 315px;
+    border-radius: 6px;
+    border: 2px solid #BC7E93;
+    /* 🎨 Cor 4 da sua paleta */
+    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.1);
+    margin: 15px 0 25px 0;
+    display: block;
+}
+
+
+/* ==========================================
+   Painel de Acessibilidade Visual (Sidebar)
+   ========================================== */
+
+.acessibilidade-visual {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #BC7E93;
+    /* 🎨 Cor 4: Malva */
+    text-align: center;
+}
+
+.acessibilidade-visual span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.acessibilidade-visual button {
+    background-color: #854B72;
+    /* 🎨 Cor 5: Ameixa Escuro */
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 3px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(133, 75, 114, 0.2);
+}
+
+.acessibilidade-visual button:hover {
+    background-color: #BC7E93;
+    /* 🎨 Cor 4: Malva no Hover */
+}
+
+.acessibilidade-visual button:active {
+    transform: scale(0.95);
+    /* Efeito de clique sutil */
+}
