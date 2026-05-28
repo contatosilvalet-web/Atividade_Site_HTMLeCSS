@@ -1,27 +1,24 @@
-/* ==========================================
-   RESET E CONFIGURAÇÕES VISUAIS GERAIS
-   ========================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Average Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 }
 
 body {
     background-color: #F5D6CA;
-    /* 🎨 Cor 1: Nude Claro (Fundo Geral Confortável) */
     color: #2c3e50;
     padding-top: 70px;
-    /* 2) Menu Fixo Compensação */
 }
 
 h1,
 h2,
 h3 {
     color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro (Garante o contraste dos títulos) */
     margin-bottom: 15px;
 }
 
@@ -37,23 +34,14 @@ ul {
     line-height: 1.8;
 }
 
-
-/* ==========================================
-   Estilização da Imagem ao lado da Sidebar
-   ========================================== */
-
 img.img-conteudo-topo {
     width: 100%;
     height: auto;
-    /* Permite que a altura se ajuste proporcionalmente */
     max-height: 300px;
-    /* Limita a altura máxima para não empurrar muito o texto */
     object-fit: cover;
-    /* Mantém o corte inteligente da foto sem distorcer */
     border-radius: 8px;
-    /* Cantos arredondados combinando com os cards */
     margin-bottom: 20px;
-    /* Dá um respiro entre a imagem e o título H1 abaixo dela */
+
 }
 
 img {
@@ -68,11 +56,6 @@ img {
     display: none;
 }
 
-
-/* ==========================================
-   2) MENU FIXO NO TOPO
-   ========================================== */
-
 .meu-header {
     position: fixed;
     top: 0;
@@ -80,7 +63,6 @@ img {
     width: 100%;
     height: 70px;
     background-color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +80,6 @@ img {
 
 .meu-header .menu-links a {
     color: #F5D6CA;
-    /* 🎨 Cor 1: Nude Claro para contraste no menu */
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
@@ -107,13 +88,7 @@ img {
 
 .meu-header .menu-links a:hover {
     color: #EBB0B7;
-    /* 🎨 Cor 3: Rosa Pastel no Hover */
 }
-
-
-/* ==========================================
-   7) HEADER STICKY INTERNO
-   ========================================== */
 
 .container-sticky-externo {
     max-width: 1200px;
@@ -126,7 +101,6 @@ img {
     position: sticky;
     top: 70px;
     background-color: #BC7E93;
-    /* 🎨 Cor 4: Malva / Rosa Queimado */
     color: white;
     padding: 15px;
     font-weight: bold;
@@ -136,11 +110,6 @@ img {
     margin-bottom: 25px;
 }
 
-
-/* ==========================================
-   8) LAYOUT COM 2 COLUNAS SEM FLEX (Floats Clássicos)
-   ========================================== */
-
 .layout-container {
     width: 100%;
     background: #ffffff;
@@ -149,7 +118,6 @@ img {
     box-shadow: 0 4px 12px rgba(133, 75, 114, 0.08);
     margin-bottom: 35px;
     clear: both;
-    /* Garante o isolamento estrutural abaixo da introdução */
 }
 
 .layout-container::after,
@@ -159,9 +127,6 @@ img {
     clear: both;
 }
 
-
-/* 3) SIDEBAR QUE ACOMPANHA O SCROLL */
-
 .sidebar-esquerda {
     float: left;
     width: 28%;
@@ -170,14 +135,14 @@ img {
     padding: 20px;
     border-radius: 6px;
     margin-left: 0;
-    /* Alinhamento corrigido para não ultrapassar os limites do container */
+
 }
 
 .sidebar-esquerda .conteudo-sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 160px;
-    /* Margem confortável calculada para evitar colisão visual no scroll */
+
 }
 
 .sidebar-esquerda h3 {
@@ -210,13 +175,13 @@ img {
 
 .sidebar-esquerda ul li a:hover {
     color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
+
 }
 
 .conteudo-direita {
     float: right;
     width: 68%;
-    /* Respiro seguro de 4% em relação à barra lateral */
+
 }
 
 .bloco-texto {
@@ -229,11 +194,6 @@ img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
-
-/* ==========================================
-   CONTEÚDO COMPLEMENTAR E SEÇÕES GLOBAIS
-   ========================================== */
-
 .secao-texto {
     background: #ffffff;
     padding: 30px;
@@ -241,7 +201,6 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(133, 75, 114, 0.05);
     clear: both;
-    /* Impede que elementos flutuantes de blocos seguintes invadam o texto */
     width: 100%;
 }
 
@@ -258,8 +217,6 @@ img {
 }
 
 
-/* COMPORTAMENTO DO GRID DE 9 CARDS */
-
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -270,7 +227,6 @@ img {
 .card {
     background: #ffffff;
     border: 1px solid #EBB0B7;
-    /* 🎨 Cor 3: Borda Rosa Pastel suave */
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
@@ -281,11 +237,6 @@ img {
     padding-top: 12px;
 }
 
-
-/* ==========================================
-   1) CARTÃO COM SELO NO CANTO SUPERIOR DIREITO
-   ========================================== */
-
 .card-selo {
     position: relative;
 }
@@ -295,7 +246,6 @@ img {
     top: 25px;
     right: 25px;
     background-color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     color: white;
     padding: 4px 8px;
     font-size: 0.7rem;
@@ -303,11 +253,6 @@ img {
     border-radius: 3px;
     z-index: 10;
 }
-
-
-/* ==========================================
-   6) ETIQUETA SOBRE IMAGEM
-   ========================================== */
 
 .container-imagem-tag {
     position: relative;
@@ -318,9 +263,7 @@ img {
     bottom: 12px;
     left: 12px;
     background-color: #F5D6CA;
-    /* 🎨 Cor 1: Nude Claro para Destaque */
     color: #854B72;
-    /* 🎨 Cor 5: Letra Ameixa Escuro */
     font-weight: bold;
     padding: 4px 8px;
     font-size: 0.75rem;
@@ -328,11 +271,6 @@ img {
     z-index: 5;
     border: 1px solid #BC7E93;
 }
-
-
-/* ==========================================
-   4) CARD COM BOTÃO FLUTUANDO DENTRO
-   ========================================== */
 
 .card-botao-flutuante {
     position: relative;
@@ -348,7 +286,6 @@ img {
 
 .btn-comprar {
     background-color: #BC7E93;
-    /* 🎨 Cor 4: Malva */
     color: white;
     border: none;
     padding: 10px 16px;
@@ -360,13 +297,8 @@ img {
 
 .btn-comprar:hover {
     background-color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
+
 }
-
-
-/* ==========================================
-   SIDEBAR SEÇÃO MATERIAIS
-   ========================================== */
 
 .layout-legado-container::after {
     content: "";
@@ -378,7 +310,6 @@ img {
     float: left;
     width: 28%;
     background-color: #D9B2A9;
-    /* 🎨 Cor 2: Rose Gold Fosco */
     padding: 20px;
     border-radius: 6px;
     position: -webkit-sticky;
@@ -410,11 +341,6 @@ img {
     width: 68%;
 }
 
-
-/* ==========================================
-   9) ELEMENTOS SOBREPOSTOS (Z-INDEX)
-   ========================================== */
-
 .container-camadas {
     position: relative;
     height: 200px;
@@ -430,7 +356,6 @@ img {
 
 .camada-baixo {
     background-color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     color: #ffffff;
     position: absolute;
     top: 10px;
@@ -441,17 +366,11 @@ img {
 .camada-cima {
     background-color: #ffffff;
     border: 2px solid #EBB0B7;
-    /* 🎨 Cor 3: Borda Rosa Pastel */
     position: absolute;
     top: 60px;
     left: 110px;
     z-index: 2;
 }
-
-
-/* ==========================================
-   FORMULÁRIO DE AVALIAÇÃO DA METODOLOGIA
-   ========================================== */
 
 .formulario-ta {
     margin-top: 20px;
@@ -467,7 +386,6 @@ img {
     margin-bottom: 5px;
     font-size: 0.95rem;
     color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
 }
 
 .form-group input[type="text"],
@@ -541,7 +459,6 @@ img {
 
 .btn-enviar-form {
     background-color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     color: white;
     padding: 12px 25px;
     font-weight: bold;
@@ -554,23 +471,16 @@ img {
 
 .btn-enviar-form:hover {
     background-color: #BC7E93;
-    /* 🎨 Cor 4: Malva */
+
 }
-
-
-/* ==========================================
-   5) BOTÃO FLUTUANTE DE CHAT (WhatsApp)
-   ========================================== */
 
 .whatsapp-btn {
     position: fixed;
     bottom: 25px;
     right: 95px;
-    /* Deslocado para dar espaço ao bonequinho do VLibras no canto */
     width: 60px;
     height: 60px;
     background-color: #25d366;
-    /* Mantido verde nativo para reconhecimento imediato do app */
     color: white;
     border-radius: 50%;
     display: flex;
@@ -592,22 +502,15 @@ img {
     height: 315px;
     border-radius: 6px;
     border: 2px solid #BC7E93;
-    /* 🎨 Cor 4 da sua paleta */
     box-shadow: 0 4px 12px rgba(133, 75, 114, 0.1);
     margin: 15px 0 25px 0;
     display: block;
 }
 
-
-/* ==========================================
-   Painel de Acessibilidade Visual (Sidebar)
-   ========================================== */
-
 .acessibilidade-visual {
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 2px dashed #BC7E93;
-    /* 🎨 Cor 4: Malva */
     text-align: center;
 }
 
@@ -616,7 +519,6 @@ img {
     font-size: 0.85rem;
     font-weight: bold;
     color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -624,7 +526,6 @@ img {
 
 .acessibilidade-visual button {
     background-color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     color: #ffffff;
     border: none;
     padding: 6px 12px;
@@ -639,10 +540,8 @@ img {
 
 .acessibilidade-visual button:hover {
     background-color: #BC7E93;
-    /* 🎨 Cor 4: Malva no Hover */
 }
 
 .acessibilidade-visual button:active {
     transform: scale(0.95);
-    /* Efeito de clique sutil */
 }
