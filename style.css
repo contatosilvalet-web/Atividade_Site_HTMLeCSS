@@ -7,8 +7,6 @@
     font-style: normal;
 }
 
-}
-
 body {
     background-color: #F5D6CA;
     color: #2c3e50;
@@ -25,7 +23,7 @@ h3 {
 p {
     margin-bottom: 15px;
     line-height: 1.6;
-    text-align: justify;
+    text-align: left !important; /* Corrigido: Remove o justify para evitar barreiras cognitivas */
 }
 
 ul {
@@ -41,7 +39,6 @@ img.img-conteudo-topo {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
-
 }
 
 img {
@@ -131,27 +128,23 @@ img {
     float: left;
     width: 28%;
     background-color: #D9B2A9;
-    /* 🎨 Cor 2: Rose Gold Fosco */
     padding: 20px;
     border-radius: 6px;
     margin-left: 0;
-
 }
 
 .sidebar-esquerda .conteudo-sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 160px;
-
 }
 
-.sidebar-esquerda h3 {
+.sidebar-esquerda h3,
+.sidebar-esquerda h2 {
     font-size: 1.1rem;
     margin-bottom: 15px;
     color: #854B72;
-    /* 🎨 Cor 5: Ameixa Escuro */
     border-bottom: 2px solid #BC7E93;
-    /* 🎨 Cor 4: Malva */
     padding-bottom: 5px;
 }
 
@@ -175,13 +168,11 @@ img {
 
 .sidebar-esquerda ul li a:hover {
     color: #854B72;
-
 }
 
 .conteudo-direita {
     float: right;
     width: 68%;
-
 }
 
 .bloco-texto {
@@ -190,7 +181,6 @@ img {
     margin-top: 15px;
     border-radius: 4px;
     border-left: 4px solid #BC7E93;
-    /* 🎨 Cor 4: Borda Malva */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
@@ -215,7 +205,6 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(133, 75, 114, 0.05);
 }
-
 
 .grid-cards {
     display: grid;
@@ -297,7 +286,6 @@ img {
 
 .btn-comprar:hover {
     background-color: #854B72;
-
 }
 
 .layout-legado-container::after {
@@ -315,6 +303,14 @@ img {
     position: -webkit-sticky;
     position: sticky;
     top: 140px;
+}
+
+.sidebar-legada h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #854B72;
+    border-bottom: 2px solid #BC7E93;
+    padding-bottom: 5px;
 }
 
 .sidebar-legada ul {
@@ -471,7 +467,6 @@ img {
 
 .btn-enviar-form:hover {
     background-color: #BC7E93;
-
 }
 
 .whatsapp-btn {
@@ -544,4 +539,16 @@ img {
 
 .acessibilidade-visual button:active {
     transform: scale(0.95);
+}
+
+/* Classe utilitária essencial para esconder os labels invisíveis mantendo a acessibilidade ativa */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
