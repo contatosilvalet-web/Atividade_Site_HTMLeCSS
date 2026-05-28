@@ -9,21 +9,21 @@
 
 body {
     background-color: #F5D6CA;
-    color: #2c3e50;
+    color: #202c39; 
     padding-top: 70px;
 }
 
 h1,
 h2,
 h3 {
-    color: #854B72;
+    color: #70375e; 
     margin-bottom: 15px;
 }
 
 p {
     margin-bottom: 15px;
     line-height: 1.6;
-    text-align: left !important; /* Corrigido: Remove o justify para evitar barreiras cognitivas */
+    text-align: left !important; 
 }
 
 ul {
@@ -59,13 +59,13 @@ img {
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: #854B72;
+    background-color: #70375e; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(133, 75, 114, 0.3);
+    box-shadow: 0 2px 10px rgba(112, 55, 94, 0.3);
 }
 
 .meu-header .logo {
@@ -76,7 +76,7 @@ img {
 }
 
 .meu-header .menu-links a {
-    color: #F5D6CA;
+    color: #ffffff; 
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
@@ -84,7 +84,7 @@ img {
 }
 
 .meu-header .menu-links a:hover {
-    color: #EBB0B7;
+    color: #F5D6CA; 
 }
 
 .container-sticky-externo {
@@ -97,7 +97,7 @@ img {
     position: -webkit-sticky;
     position: sticky;
     top: 70px;
-    background-color: #BC7E93;
+    background-color: #70375e; 
     color: white;
     padding: 15px;
     font-weight: bold;
@@ -112,7 +112,7 @@ img {
     background: #ffffff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.08);
+    box-shadow: 0 4px 12px rgba(112, 55, 94, 0.08);
     margin-bottom: 35px;
     clear: both;
 }
@@ -127,10 +127,11 @@ img {
 .sidebar-esquerda {
     float: left;
     width: 28%;
-    background-color: #D9B2A9;
+    background-color: #f7e6e2;
     padding: 20px;
     border-radius: 6px;
     margin-left: 0;
+    border: 1px solid #EBB0B7;
 }
 
 .sidebar-esquerda .conteudo-sticky {
@@ -143,7 +144,7 @@ img {
 .sidebar-esquerda h2 {
     font-size: 1.1rem;
     margin-bottom: 15px;
-    color: #854B72;
+    color: #70375e;
     border-bottom: 2px solid #BC7E93;
     padding-bottom: 5px;
 }
@@ -159,15 +160,14 @@ img {
 
 .sidebar-esquerda ul li a {
     text-decoration: none;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(133, 75, 114, 0.2);
+    color: #70375e; 
     font-weight: bold;
     font-size: 0.9rem;
     transition: color 0.2s;
 }
 
 .sidebar-esquerda ul li a:hover {
-    color: #854B72;
+    color: #BC7E93;
 }
 
 .conteudo-direita {
@@ -189,7 +189,7 @@ img {
     padding: 30px;
     margin-bottom: 35px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.05);
+    box-shadow: 0 4px 12px rgba(112, 55, 94, 0.05);
     clear: both;
     width: 100%;
 }
@@ -203,7 +203,7 @@ img {
     padding: 30px;
     margin-bottom: 35px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.05);
+    box-shadow: 0 4px 12px rgba(112, 55, 94, 0.05);
 }
 
 .grid-cards {
@@ -234,7 +234,7 @@ img {
     position: absolute;
     top: 25px;
     right: 25px;
-    background-color: #854B72;
+    background-color: #70375e;
     color: white;
     padding: 4px 8px;
     font-size: 0.7rem;
@@ -251,8 +251,8 @@ img {
     position: absolute;
     bottom: 12px;
     left: 12px;
-    background-color: #F5D6CA;
-    color: #854B72;
+    background-color: #70375e; 
+    color: #ffffff;
     font-weight: bold;
     padding: 4px 8px;
     font-size: 0.75rem;
@@ -274,7 +274,7 @@ img {
 }
 
 .btn-comprar {
-    background-color: #BC7E93;
+    background-color: #70375e; 
     color: white;
     border: none;
     padding: 10px 16px;
@@ -285,7 +285,7 @@ img {
 }
 
 .btn-comprar:hover {
-    background-color: #854B72;
+    background-color: #BC7E93;
 }
 
 .layout-legado-container::after {
@@ -297,18 +297,19 @@ img {
 .sidebar-legada {
     float: left;
     width: 28%;
-    background-color: #D9B2A9;
+    background-color: #f7e6e2; 
     padding: 20px;
     border-radius: 6px;
     position: -webkit-sticky;
     position: sticky;
     top: 140px;
+    border: 1px solid #EBB0B7;
 }
 
 .sidebar-legada h2 {
     font-size: 1.1rem;
     margin-bottom: 15px;
-    color: #854B72;
+    color: #70375e;
     border-bottom: 2px solid #BC7E93;
     padding-bottom: 5px;
 }
@@ -324,12 +325,12 @@ img {
 
 .sidebar-legada ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #70375e;
     font-weight: bold;
 }
 
 .sidebar-legada ul li a:hover {
-    color: #854B72;
+    color: #BC7E93;
 }
 
 .conteudo-legado {
@@ -347,11 +348,11 @@ img {
     width: 320px;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(133, 75, 114, 0.15);
+    box-shadow: 0 4px 15px rgba(112, 55, 94, 0.15);
 }
 
 .camada-baixo {
-    background-color: #854B72;
+    background-color: #70375e;
     color: #ffffff;
     position: absolute;
     top: 10px;
@@ -381,7 +382,7 @@ img {
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 0.95rem;
-    color: #854B72;
+    color: #70375e;
 }
 
 .form-group input[type="text"],
@@ -418,7 +419,7 @@ img {
 .formulario-ta legend {
     font-weight: bold;
     padding: 0 10px;
-    color: #854B72;
+    color: #70375e;
 }
 
 .pergunta-item {
@@ -431,7 +432,7 @@ img {
     display: block;
     font-weight: 500;
     margin-bottom: 8px;
-    color: #34495e;
+    color: #202c39; 
 }
 
 .input-pequeno {
@@ -454,7 +455,7 @@ img {
 }
 
 .btn-enviar-form {
-    background-color: #854B72;
+    background-color: #70375e;
     color: white;
     padding: 12px 25px;
     font-weight: bold;
@@ -475,7 +476,7 @@ img {
     right: 95px;
     width: 60px;
     height: 60px;
-    background-color: #25d366;
+    background-color: #1ebea5; 
     color: white;
     border-radius: 50%;
     display: flex;
@@ -497,7 +498,7 @@ img {
     height: 315px;
     border-radius: 6px;
     border: 2px solid #BC7E93;
-    box-shadow: 0 4px 12px rgba(133, 75, 114, 0.1);
+    box-shadow: 0 4px 12px rgba(112, 55, 94, 0.1);
     margin: 15px 0 25px 0;
     display: block;
 }
@@ -513,14 +514,14 @@ img {
     display: block;
     font-size: 0.85rem;
     font-weight: bold;
-    color: #854B72;
+    color: #70375e;
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .acessibilidade-visual button {
-    background-color: #854B72;
+    background-color: #70375e;
     color: #ffffff;
     border: none;
     padding: 6px 12px;
@@ -530,7 +531,7 @@ img {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
-    box-shadow: 0 2px 4px rgba(133, 75, 114, 0.2);
+    box-shadow: 0 2px 4px rgba(112, 55, 94, 0.2);
 }
 
 .acessibilidade-visual button:hover {
@@ -541,7 +542,6 @@ img {
     transform: scale(0.95);
 }
 
-/* Classe utilitária essencial para esconder os labels invisíveis mantendo a acessibilidade ativa */
 .sr-only {
     position: absolute;
     width: 1px;
